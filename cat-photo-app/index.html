@@ -5,6 +5,7 @@
     <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>عَبدُالله سَيد | تطبيق Cat Photo App</title>
+    <!--<title>CatPhotoApp</title>-->
     <!-- CSS -->
     <!-- <link rel="stylesheet" href="/assets/css/main.css" /> -->
   </head>
@@ -40,7 +41,25 @@
           <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
         </figure>
       </section>
-      <section></section>
+      <section>
+        <h2>Cat Form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <fieldset>
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <label><input checked type="radio" id="indoor" name="indoor-outdoor" value="indoor" /> Indoor</label>
+            <label><input type="radio" id="outdoor" name="indoor-outdoor" value="outdoor" /> Outdoor</label>
+          </fieldset>
+          <fieldset>
+            <legend>What's your cat's personality?</legend>
+            <input checked type="checkbox" id="loving" name="personality" value="loving" /><label for="loving">Loving</label> <input type="checkbox" id="lazy" name="personality" value="lazy" /><label for="lazy">Lazy</label> <input type="checkbox" id="energetic" name="personality" value="energetic" /><label for="energetic">Energetic</label>
+          </fieldset>
+          <input type="text" name="catphotourl" placeholder="cat photo URL" required />
+          <button type="submit">Submit</button>
+        </form>
+      </section>
     </main>
+    <footer>
+      <p>No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a></p>
+    </footer>
   </body>
 </html>
