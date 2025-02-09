@@ -7,17 +7,18 @@
     <title>عَبدُالله سَيد | مُطور | مشروع Survey Form</title>
     <!-- css -->
     <!-- <link rel="stylesheet" href="/assets/css/main.css" /> -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1 id="title">CatCamp Survey Form</h1>
     <p id="description">Thank you for taking the time to help us improve the platform</p>
     <form action="/" id="survey-form">
-      <label for="" id="name-label">Name<input type="text" id="name " placeholder="Enter your name" /></label>
-      <label for="" id="email-label">Email<input type="email" id="email" placeholder="Enter your Email" /></label>
-      <label for="" id="number-label">Age (optional)<input type="number" id="number" min="10" max="99" placeholder="Age" /> </label>
+      <label for="name" id="name-label">Name<input required type="text" id="name" placeholder="Enter your name" /></label>
+      <label for="email" id="email-label">Email<input required type="email" id="email" placeholder="Enter your Email" /></label>
+      <label for="number" id="number-label">Age (optional)<input type="number" id="number" min="10" max="99" placeholder="Age" /> </label>
       <fieldset>
         <legend>Which option best describes your current role?</legend>
-        <select name="" id="dropdown">
+        <select name="dropdown" id="dropdown">
           <option value="Select current role">Select current role</option>
           <option value="Student">Student</option>
           <option value="Full Time Job">Full Time Job</option>
@@ -28,13 +29,13 @@
       </fieldset>
       <fieldset>
         <legend>Would you recommend freeCodeCamp to a friend?</legend>
-        <label for=""><input type="radio" name="" id="" /> Definitely</label>
-        <label for=""><input type="radio" name="" id="" /> Maybe</label>
-        <label for=""><input type="radio" name="" id="" /> Not sure</label>
+        <label for=""><input type="radio" name="recommend" value="definitely" /> Definitely</label>
+        <label for=""><input type="radio" name="recommend" value="maybe" /> Maybe</label>
+        <label for=""><input type="radio" name="recommend" value="not sure" /> Not sure</label>
       </fieldset>
       <fieldset>
         <legend>What is your favorite feature of CatCamp?</legend>
-        <select name="" id="dropdown">
+        <select name="dropdown" id="dropdown">
           <option value="Select an option">Select an option</option>
           <option value="Challenges">Challenges</option>
           <option value="Projects">Projects</option>
@@ -42,6 +43,18 @@
           <option value="Open Source">Open Source</option>
         </select>
       </fieldset>
+      <fieldset>
+        <legend>What would you like to see improved? <span>(Check all that apply)</span></legend>
+        <label for=""><input type="checkbox" value="Front-end Projects"/> Front-end Projects</label>
+        <label for=""><input type="checkbox" value="Back-end Projects"/> Back-end Projects</label>
+        <label for=""><input type="checkbox" value="Data Visualization"/> Data Visualization</label>
+        <label for=""><input type="checkbox" value="Challenges"/> Challenges</label>
+      </fieldset>
+      <fieldset>
+        <legend>Any comments or suggestions?</legend>
+        <textarea name="" id="textarea"></textarea>
+      </fieldset>
+      <input type="submit" id="submit" value="Submit" />
     </form>
   </body>
 </html>
